@@ -13,7 +13,7 @@ return {
           floats = "transparent", -- Set floating windows to transparent
         },
       })
-      vim.cmd.colorscheme("tokyonight")
+      -- vim.cmd.colorscheme("tokyonight")
     end,
   },
   {
@@ -24,6 +24,22 @@ return {
         transparent_mode = true,
       })
       -- vim.cmd.colorscheme("gruvbox")
+    end,
+  },
+  -- Using Lazy
+  {
+    "navarasu/onedark.nvim",
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      require("onedark").setup({
+        style = "darker",
+        transparent = true,
+        lualine = {
+          transparent = true,
+        },
+      })
+      require("onedark").load()
+      vim.cmd.colorscheme("onedark")
     end,
   },
 }
