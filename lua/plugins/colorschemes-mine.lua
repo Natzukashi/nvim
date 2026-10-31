@@ -16,11 +16,19 @@ return {
   {
     "folke/tokyonight.nvim",
     enabled = false,
+    opts = {
+      transparent = true,
+      styles = {
+        sidebar = "transparent",
+        floats = "transparent",
+      },
+    },
   },
 
   -- 3. Add your new colorscheme plugin package
   {
     "ellisonleao/gruvbox.nvim",
+    enabled = true,
     lazy = false,
     priority = 1000, -- High priority ensures it loads immediately on startup
     opts = {
