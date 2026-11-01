@@ -8,14 +8,14 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight", -- Replace with your preferred theme name
+      colorscheme = "gruvbox", -- Replace with your preferred theme name
     },
   },
 
   -- 2. Completely disable the default tokyonight plugin
   {
     "folke/tokyonight.nvim",
-    enabled = true,
+    enabled = false,
     ops = {
       transparent = true,
       styles = {
@@ -28,7 +28,7 @@ return {
   -- 3. Add your new colorscheme plugin package
   {
     "ellisonleao/gruvbox.nvim",
-    enabled = false,
+    enabled = true,
     lazy = false,
     opts = {
       transparent_mode = true,
