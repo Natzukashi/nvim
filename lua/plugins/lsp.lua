@@ -1,24 +1,22 @@
 return {
     {
-        "neovim/nvim-lspconfig",
+        'neovim/nvim-lspconfig',
     },
     {
-        "mason-org/mason.nvim",
-        opts = {}
+        'mason-org/mason.nvim',
+        opts = {},
     },
     {
-        "mason-org/mason-lspconfig.nvim",
-        opts = {}
+        'mason-org/mason-lspconfig.nvim',
+        opts = {},
     },
     {
-        "L3MON4D3/LuaSnip",
-        version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        'L3MON4D3/LuaSnip',
+        version = 'v2.*', -- Replace <CurrentMajor> by the latest released major (first number of latest release)
         -- install jsregexp (optional!).
-        build = "make install_jsregexp",
-        dependencies = { "rafamadriz/friendly-snippets" },
-        config = function()
-            require("luasnip.loaders.from_vscode").lazy_load()
-        end,
+        build = 'make install_jsregexp',
+        dependencies = { 'rafamadriz/friendly-snippets' },
+        config = function() require('luasnip.loaders.from_vscode').lazy_load() end,
     },
     {
         'saghen/blink.cmp',
@@ -32,7 +30,7 @@ return {
             appearance = {
                 -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
                 -- Adjusts spacing to ensure icons are aligned
-                nerd_font_variant = 'normal'
+                nerd_font_variant = 'normal',
             },
 
             -- (Default) Only show the documentation popup when manually triggered
@@ -50,9 +48,8 @@ return {
             -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
             --
             -- See the fuzzy documentation for more information
-            fuzzy = { implementation = "prefer_rust_with_warning" }
+            fuzzy = { implementation = 'prefer_rust_with_warning' },
         },
-        opts_extend = { "sources.default" }
-    }
+        opts_extend = { 'sources.default' },
+    },
 }
-
