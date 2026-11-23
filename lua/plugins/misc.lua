@@ -1,5 +1,4 @@
 return {
-
     {
         'xiyaowong/transparent.nvim',
         lazy = false,
@@ -21,6 +20,13 @@ return {
             },
             sections = {
                 lualine_b = { 'branch', 'diff', 'diagnostics' },
+                lualine_x = {
+                    {
+                        require('noice').api.status.mode.get,
+                        cond = require('noice').api.status.mode.has,
+                        color = { fg = '#ff9e64' },
+                    },
+                },
                 lualine_z = {
                     function() return ' ' .. os.date '%H:%M' end,
                 },
@@ -51,5 +57,16 @@ return {
                 top_down = true,
             }
         end,
+    },
+
+    -- Discord lmfao
+    {
+        'vyfor/cord.nvim',
+        opts = {
+            display = {
+                theme = 'minecraft',
+                flavor = 'accent',
+            },
+        },
     },
 }
