@@ -40,19 +40,16 @@ return {
     },
 
     {
+        'rcarriga/nvim-notify',
+        config = function()
+            vim.notify = require 'notify'
 
-        {
-            'rcarriga/nvim-notify',
-            config = function()
-                vim.notify = require 'notify'
-
-                require('notify').setup {
-                    timeout = 3000,
-                    stages = 'fade',
-                    render = 'compact',
-                    top_down = true,
-                }
-            end,
-        },
+            require('notify').setup {
+                timeout = 3000,
+                stages = 'fade',
+                render = 'compact',
+                top_down = true,
+            }
+        end,
     },
 }
