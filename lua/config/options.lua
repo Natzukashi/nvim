@@ -10,6 +10,8 @@ vim.opt.winborder = 'rounded'
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
+vim.opt.fillchars:append { eob = ' ' }
+vim.opt.showmode = false
 -- use :help "commandname" to get help
 
 -- highlight on yank
