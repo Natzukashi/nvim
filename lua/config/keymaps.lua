@@ -12,8 +12,8 @@ map('n', '<M-j>', '<C-w>j', { desc = 'Move to lower split' })
 map('n', '<M-k>', '<C-w>k', { desc = 'Move to upper split' })
 map('n', '<M-l>', '<C-w>l', { desc = 'Move to right split' })
 
--- Oil
-map('n', '<leader>e', function() require('oil').toggle_float() end, { desc = 'Toggle Oil float' })
+-- Flyer
+map('n', '<leader>e', function() require('fyler').toggle { kind = 'split_left_most' } end, { desc = 'Fyler.nvim - Open' })
 
 -- Undotree
 map('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'Toggle Undotree' })
