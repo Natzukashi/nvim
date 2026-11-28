@@ -2,23 +2,23 @@ return {
     {
         'CRAG666/code_runner.nvim',
         dependencies = { 'CRAG666/betterTerm.nvim' },
-        keys = { { '<leader>r', '<cmd>RunCode<cr>', desc = 'Run code' } },
+        cmd = { 'RunCode', 'RunFile', 'RunProject', 'RunClose', 'CRFiletype', 'CRProjects' },
         opts = {
             mode = 'better_term',
             better_term = {
-                clean = false, -- true clears the terminal before each run
-                number = 10, -- terminal ID used for runs
+                clean = false,
+                number = 10,
             },
             filetype = {
                 python = 'python3 -u',
-                c = 'cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt',
+                c = 'cd $dir && gcc $fileName -o $fileNameWithoutExt -lm && $dir/$fileNameWithoutExt',
             },
         },
     },
     {
         'CRAG666/betterTerm.nvim',
         opts = {
-            position = 'bot', -- bottom split, like VS Code
+            position = 'bot',
             size = 15,
         },
     },

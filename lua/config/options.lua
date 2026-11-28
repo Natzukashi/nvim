@@ -12,6 +12,7 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 vim.opt.fillchars:append { eob = ' ' }
 vim.opt.showmode = false
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- use :help "commandname" to get help
 
 -- highlight on yank
@@ -40,9 +41,9 @@ vim.lsp.config('lua_ls', {
 vim.diagnostic.config { virtual_text = true }
 
 -- inlay hints for type
-vim.api.nvim_create_autocmd('LspAttach', {
-    callback = function(args)
-        local client = vim.lsp.get_client_by_id(args.data.client_id)
-        if client and client:supports_method 'textDocument/inlayHint' then vim.lsp.inlay_hint.enable(true, { bufnr = args.buf }) end
-    end,
-})
+-- vim.api.nvim_create_autocmd('LspAttach', {
+--     callback = function(args)
+--         local client = vim.lsp.get_client_by_id(args.data.client_id)
+--         if client and client:supports_method 'textDocument/inlayHint' then vim.lsp.inlay_hint.enable(true, { bufnr = args.buf }) end
+--     end,
+-- })
